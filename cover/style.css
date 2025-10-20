@@ -18,7 +18,7 @@
 
 .banner-wrap {
   /* feel free to use your own img  */
-  background-image: url(https://images.unsplash.com/photo-1649879682362-eb6e442f4a50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80);
+  background-image: url(../Assets/Dave\ Cover.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -59,7 +59,35 @@
 
 .scrolling {
   background: black;
-  opacity: 80%;
+  opacity: 60%;
   transition: all 0.5s;
+}
+
+/* CSS-only typing animation */
+.typed-css {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  animation: typing 4s steps(40, end) 1s 1 normal both, 
+             blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { 
+    width: 0;
+  }
+  to { 
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to { 
+    border-color: transparent;
+  }
+  50% { 
+    border-color: white;
+  }
 }
 
