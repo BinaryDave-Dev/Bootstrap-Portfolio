@@ -91,3 +91,8 @@
   }
 }
 
+/* Move main content up slightly */
+.banner-wrap main {
+  margin-top: -80px;
+}
+
