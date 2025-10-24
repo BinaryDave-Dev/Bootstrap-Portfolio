@@ -1,6 +1,4 @@
-/*
- * Globals
- */
+/* Reset all margins and padding */
 
  * {
   margin: 0;
@@ -8,16 +6,12 @@
   box-sizing: border-box;
 }
 
-/*
- * Base structure
- */
+/* Main layout styles */
 
-/*
- * Header
- */
+/* Header and navigation */
 
 .banner-wrap {
-  /* feel free to use your own img  */
+  /* Hero section background image */
   background-image: url(../Assets/Dave\ Cover.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -58,12 +52,30 @@
 }
 
 .scrolling {
-  background: black;
+  background: white;
   opacity: 60%;
   transition: all 0.5s;
 }
 
-/* CSS-only typing animation */
+.scrolling h3 {
+  color: black;
+}
+
+.scrolling .nav-link {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.scrolling .nav-link:hover,
+.scrolling .nav-link:focus {
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+}
+
+.scrolling .nav-link.active {
+  color: black;
+  border-bottom-color: black;
+}
+
+/* Typing animation for hero text */
 .typed-css {
   display: inline-block;
   overflow: hidden;
@@ -91,8 +103,186 @@
   }
 }
 
-/* Move main content up slightly */
+/* Adjust hero content position */
 .banner-wrap main {
   margin-top: -80px;
+}
+
+/* Dark mode styles */
+#darkModeToggle:checked ~ * {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+/* Dark mode section headers */
+#darkModeToggle:checked ~ * mark {
+  background-color: #444444 !important;
+  color: #ffffff !important;
+}
+
+/* Make all text white in dark mode */
+#darkModeToggle:checked ~ * {
+  color: white !important;
+}
+
+#darkModeToggle:checked ~ * * {
+  color: white !important;
+}
+
+#darkModeToggle:checked ~ * .card {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+  border: 1px solid #444444 !important;
+}
+
+#darkModeToggle:checked ~ * .card-body {
+  color: #ffffff !important;
+}
+
+#darkModeToggle:checked ~ * .bg-light {
+  background-color: #1a1a1a !important;
+}
+
+#darkModeToggle:checked ~ * .text-dark {
+  color: #ffffff !important;
+}
+
+#darkModeToggle:checked ~ * .btn-outline-dark {
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+#darkModeToggle:checked ~ * .btn-outline-dark:hover {
+  background-color: #ffffff !important;
+  color: #1a1a1a !important;
+}
+
+#darkModeToggle:checked ~ * .form-control {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+  border-color: #444444 !important;
+}
+
+#darkModeToggle:checked ~ * .form-control:focus {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+  border-color: #007bff !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
+}
+
+/* Dark mode navbar styles */
+#darkModeToggle:checked ~ * .scrolling {
+  background: black !important;
+  opacity: 60%;
+}
+
+#darkModeToggle:checked ~ * .scrolling h3 {
+  color: white !important;
+}
+
+#darkModeToggle:checked ~ * .scrolling .nav-link {
+  color: white !important;
+}
+
+#darkModeToggle:checked ~ * .scrolling .nav-link:hover,
+#darkModeToggle:checked ~ * .scrolling .nav-link:focus {
+  color: white !important;
+  border-bottom-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+#darkModeToggle:checked ~ * .scrolling .nav-link.active {
+  color: white !important;
+  border-bottom-color: white !important;
+}
+
+#darkModeToggle:checked ~ * .scrolling .btn-outline-dark {
+  color: white !important;
+  border-color: white !important;
+}
+
+#darkModeToggle:checked ~ * .scrolling .btn-outline-dark:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+/* Force navbar text white in dark mode */
+#darkModeToggle:checked ~ * header h3 {
+  color: white !important;
+}
+
+#darkModeToggle:checked ~ * header .nav-link {
+  color: white !important;
+}
+
+#darkModeToggle:checked ~ * header .nav-link:hover {
+  color: white !important;
+}
+
+#darkModeToggle:checked ~ * header .nav-link.active {
+  color: white !important;
+}
+
+/* Extra navbar text selectors */
+#darkModeToggle:checked ~ * .scrolling h3,
+#darkModeToggle:checked ~ * .scrolling .nav-link,
+#darkModeToggle:checked ~ * .scrolling .nav-link:hover,
+#darkModeToggle:checked ~ * .scrolling .nav-link:focus,
+#darkModeToggle:checked ~ * .scrolling .nav-link.active {
+  color: white !important;
+}
+
+/* Target specific navbar elements */
+#darkModeToggle:checked ~ * header .d-flex h3 {
+  color: white !important;
+}
+
+#darkModeToggle:checked ~ * header .d-flex .nav-link {
+  color: white !important;
+}
+
+#darkModeToggle:checked ~ * header .d-flex .nav-link:hover {
+  color: white !important;
+}
+
+#darkModeToggle:checked ~ * header .d-flex .nav-link.active {
+  color: white !important;
+}
+
+/* Toggle button icon changes */
+#darkModeToggle:checked ~ * label i {
+  display: none;
+}
+
+#darkModeToggle:checked ~ * label::after {
+  content: "\F495";
+  font-family: "bootstrap-icons";
+  font-size: 1rem;
+}
+
+#darkModeToggle:not(:checked) ~ * label i {
+  display: inline;
+}
+
+#darkModeToggle:not(:checked) ~ * label::after {
+  display: none;
+}
+
+/* Toggle button icon changes */
+#darkModeToggle:checked ~ * label i {
+  display: none;
+}
+
+#darkModeToggle:checked ~ * label::after {
+  content: "\F495";
+  font-family: "bootstrap-icons";
+  font-size: 1rem;
+}
+
+#darkModeToggle:not(:checked) ~ * label i {
+  display: inline;
+}
+
+#darkModeToggle:not(:checked) ~ * label::after {
+  display: none;
 }
 
